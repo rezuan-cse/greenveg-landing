@@ -1,82 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Veg — Fresh Produce Delivered via EV</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1.5rem;
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 16px;
-      padding: 2.5rem;
-      max-width: 540px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(34, 197, 94, 0.15);
-      color: #4ade80;
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 0.4rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background-color: #16a34a;
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.85rem 1.75rem;
-      border-radius: 8px;
-      transition: background-color 0.2s ease;
-    }
-    .btn:hover { background-color: #15803d; }
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Green Veg — নিরাপদ খাবার, সুস্থ পরিবার</title>
+<meta name="description" content="উত্তরায় নিজেদের ফার্মের তাজা ও নিরাপদ সবজির হোম ডেলিভারি। WhatsApp-এ অর্ডার করুন। Fresh, safe vegetable delivery in Uttara, Dhaka.">
+<meta name="theme-color" content="#134A24">
+<link rel="canonical" href="https://greenveg.co/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://greenveg.co/">
+<meta property="og:title" content="Green Veg — নিরাপদ খাবার, সুস্থ পরিবার">
+<meta property="og:description" content="নিজেদের ফার্মের তাজা সবজি, ফ্রি হোম ডেলিভারি, ন্যায্য দাম। উত্তরা থেকে শুরু।">
+<meta property="og:locale" content="bn_BD">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Green Veg","url":"https://greenveg.co","email":"support@greenveg.co","areaServed":"Uttara, Dhaka, Bangladesh","description":"Fresh and safe vegetable home delivery from contract farms."}</script>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F9EF; --surface:#FFFFFF; --ink:#12301B; --muted:#4D6553; --line:#D7E6CF;
+  --leaf:#1E6B34; --leaf-d:#134A24; --lime:#8CC63F; --tint:#E4F1D8; --on-leaf:#FFFFFF; --wa:#1FAF52;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1A11; --surface:#16261A; --ink:#EAF4E4; --muted:#A5BBA9; --line:#274030; --leaf:#5DBB6F; --leaf-d:#0B2A15; --tint:#1B3322; --on-leaf:#0E1A11;}}
+:root[data-theme="dark"]{
+  --bg:#0E1A11; --surface:#16261A; --ink:#EAF4E4; --muted:#A5BBA9; --line:#274030; --leaf:#5DBB6F; --leaf-d:#0B2A15; --tint:#1B3322; --on-leaf:#0E1A11;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind Siliguri","Noto Sans Bengali","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.6;padding-bottom:84px}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+h2{font-size:26px;line-height:1.3;font-weight:700;margin-bottom:8px}
+section{padding:44px 0 0}
+.lead{color:var(--muted);margin-bottom:22px}
+
+/* hero */
+.hero{background:var(--leaf-d);color:#F2FAEA;padding:28px 0 34px;border-radius:0 0 28px 28px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;letter-spacing:.2px}
+.brand small{display:block;font-size:11px;font-weight:500;color:#B9D9A6;letter-spacing:1.5px;margin-top:-4px}
+.logo{width:38px;height:38px;border-radius:12px;background:var(--lime);display:grid;place-items:center;font-size:22px}
+.hero h1{font-size:38px;line-height:1.2;font-weight:700;margin:30px 0 12px}
+.hero p{color:#CFE6C0;font-size:18px}
+.btns{display:grid;gap:10px;margin-top:24px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:10px 18px;border-radius:14px;background:var(--wa);color:#fff;font-weight:600;font-size:17px;text-decoration:none}
+.btn small{font-weight:400;opacity:.9;font-size:13px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+
+/* van tracker */
+.track{margin-top:28px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px}
+.track b{font-size:15px;color:#B9D9A6;font-weight:500}
+.road{position:relative;height:44px;margin:12px 0 8px}
+.road::before{content:"";position:absolute;left:0;right:0;top:26px;border-top:2px dashed rgba(255,255,255,.35)}
+.van{position:absolute;top:0;font-size:28px;left:0;animation:drive 5s ease-out forwards;transform:scaleX(-1)}
+.home{position:absolute;right:0;top:2px;font-size:26px}
+@keyframes drive{to{left:calc(100% - 78px)}}
+.eta{display:flex;justify-content:space-between;font-size:15px}
+.eta span:last-child{color:var(--lime);font-weight:600}
+
+/* cards */
+.grid{display:grid;gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.ico{flex:none;width:44px;height:44px;border-radius:14px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.card h3{font-size:18px;font-weight:600;line-height:1.35}
+.card p{color:var(--muted);font-size:15.5px;line-height:1.5}
+
+/* farm */
+.farm{background:var(--tint);border-radius:22px;padding:24px 20px}
+.farm ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.farm li{display:flex;gap:10px;align-items:flex-start}
+.farm li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--leaf);color:var(--on-leaf);font-size:14px;font-weight:700;display:grid;place-items:center;margin-top:2px}
+
+/* pay */
+.pay{display:flex;flex-wrap:wrap;gap:10px}
+.pay span{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-weight:600}
+
+/* order */
+.order{background:var(--leaf-d);color:#F2FAEA;border-radius:24px;padding:26px 20px;margin-top:44px}
+.order p{color:#CFE6C0}
+.order .btn{margin-top:12px}
+.mail{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;border:2px solid var(--leaf);color:var(--leaf);font-weight:600;text-decoration:none;word-break:break-all}
+footer{padding:28px 0 8px;text-align:center;color:var(--muted);font-size:14px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);display:flex;gap:8px;z-index:5}
+.bar a{flex:1;min-height:48px;border-radius:12px;background:var(--wa);color:#fff;font-weight:600;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:15px;text-align:center;line-height:1.2}
+
+@media (min-width:700px){.wrap{max-width:820px}.grid{grid-template-columns:1fr 1fr}.btns{grid-template-columns:1fr 1fr}.hero h1{font-size:48px}.bar{display:none}body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){.van{animation:none;left:calc(100% - 78px)}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="badge">🌱 Launching Soon</div>
-    <h1>Green Veg</h1>
-    <p>Fresh, organic produce delivered straight to your doorstep using eco-friendly Electric Vehicles. Clean energy meets farm-fresh delivery.</p>
-    <a href="mailto:support@greenveg.co" class="btn">Get in Touch</a>
-    <div class="footer">
-      &copy; 2026 Green Veg. All rights reserved.
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><div class="logo" aria-hidden="true">🌿</div><div>Green Veg<small>FRESH · SAFE · NATURAL</small></div></div>
+    <h1>নিরাপদ খাবার, এখন আপনার দরজায়</h1>
+    <p>নিজেদের ফার্মের তাজা সবজি, প্রশিক্ষিত ডেলিভারি টিম আর ন্যায্য দাম। উত্তরা থেকে শুরু।</p>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/8801540612439?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">💬 <span>সেক্টর ০৩ — অর্ডার করুন<br><small>01540612439</small></span></a>
+      <a class="btn" href="https://wa.me/8801792352358?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">💬 <span>সেক্টর ০৭ — অর্ডার করুন<br><small>01792352358</small></span></a>
+    </div>
+    <div class="track" aria-label="নিকটতম ভ্যানের উদাহরণ">
+      <b>আপনার কাছের ভ্যান</b>
+      <div class="road"><span class="van" aria-hidden="true">🚚</span><span class="home" aria-hidden="true">🏠</span></div>
+      <div class="eta"><span>Green Veg ভ্যান</span><span>০.৫ কিমি দূরে</span></div>
     </div>
   </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>কেন Green Veg?</h2>
+    <p class="lead">প্রতিদিনের বাজার হবে সহজ, তাজা আর নিশ্চিন্ত।</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🥕</div><div><h3>প্রতিদিন তাজা</h3><p>মানসম্মত সবজি ও খাদ্যপণ্য, প্রতিদিনের জন্য।</p></div></div>
+      <div class="card"><div class="ico">🛡️</div><div><h3>নিরাপদ ও পরিচ্ছন্ন</h3><p>ডেলিভারির আগে যথাযথভাবে পরিষ্কার ও প্রস্তুত করা।</p></div></div>
+      <div class="card"><div class="ico">🌱</div><div><h3>প্রাকৃতিক ও স্বাস্থ্যসম্মত</h3><p>অপ্রয়োজনীয় রাসায়নিক এড়িয়ে নিরাপদ খাদ্য নিশ্চিতের প্রচেষ্টা।</p></div></div>
+      <div class="card"><div class="ico">🚚</div><div><h3>ফ্রি হোম ডেলিভারি</h3><p>নির্দিষ্ট এলাকার জন্য সুবিধাজনক হোম ডেলিভারি।</p></div></div>
+      <div class="card"><div class="ico">⏱️</div><div><h3>দ্রুত সার্ভিস</h3><p>অর্ডারের পর নির্ধারিত সময়ের মধ্যে পৌঁছে দেওয়ার লক্ষ্য।</p></div></div>
+      <div class="card"><div class="ico">৳</div><div><h3>সাশ্রয়ী ন্যায্য দাম</h3><p>ভালো মানের পণ্য ন্যায্য ও প্রতিযোগিতামূলক মূল্যে।</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="farm">
+      <h2>মাঠ থেকে সরাসরি আপনার টেবিলে</h2>
+      <p class="lead" style="margin-bottom:0">১০০% Contract Farming ভিত্তিক উৎপাদন।</p>
+      <ul>
+        <li>নির্বাচিত ও প্রশিক্ষিত কৃষকের মাধ্যমে চাষ</li>
+        <li>চাষ থেকে সংগ্রহ পর্যন্ত Quality Monitoring</li>
+        <li>অধিকাংশ সবজি নিজেদের ফার্মে উৎপাদিত</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>সহজ ডিজিটাল পেমেন্ট</h2>
+    <p class="lead">সহজ, দ্রুত ও নিরাপদে অর্ডারের মূল্য পরিশোধ করুন।</p>
+    <div class="pay"><span>বিকাশ</span><span>নগদ</span><span>রকেট</span><span>অনলাইন ব্যাংকিং</span></div>
+  </section>
+
+  <div class="order" id="order">
+    <h2>এখনই অর্ডার করুন</h2>
+    <p>WhatsApp-এ মেসেজ দিন। আপনার সেক্টরের নম্বরে যোগাযোগ করুন।</p>
+    <a class="btn" href="https://wa.me/8801540612439?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">উত্তরা সেক্টর ০৩ · 01540612439</a>
+    <a class="btn" href="https://wa.me/8801792352358?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">উত্তরা সেক্টর ০৭ · 01792352358</a>
+  </div>
+
+  <section>
+    <h2>প্রশ্ন বা অভিযোগ আছে?</h2>
+    <p class="lead">অর্ডারের বাইরে যেকোনো বিষয়ে ইমেইল করুন। আমরা উত্তর দেব।</p>
+    <a class="mail" href="mailto:support@greenveg.co?subject=Green%20Veg%20Support">✉️ support@greenveg.co</a>
+  </section>
+
+  <footer>Green Veg — নিরাপদ খাবার, সুস্থ পরিবার<br><a href="https://greenveg.co">greenveg.co</a> · <a href="mailto:support@greenveg.co">support@greenveg.co</a><br>© 2026 Green Veg</footer>
+</main>
+
+<nav class="bar" aria-label="দ্রুত অর্ডার">
+  <a href="https://wa.me/8801540612439?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">সেক্টর ০৩<br>WhatsApp</a>
+  <a href="https://wa.me/8801792352358?text=আমি%20Green%20Veg%20থেকে%20অর্ডার%20করতে%20চাই">সেক্টর ০৭<br>WhatsApp</a>
+</nav>
 </body>
 </html>
