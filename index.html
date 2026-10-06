@@ -134,8 +134,12 @@ footer{padding:36px 0 28px;text-align:center;color:var(--muted);font-size:14px}
 document.getElementById("notifyForm").addEventListener("submit", async function(e){
   e.preventDefault();
   var msg = document.getElementById("notifyMsg");
-  var email = this.email.value.trim();
+  var btn = this.querySelector("button[type=submit]");
+  var email = this.email.value.trim().toLowerCase();
+  var seenKey = "gv_notified_" + email;
+  try { if (localStorage.getItem(seenKey)) { msg.textContent = "এই ইমেইল দিয়ে আগেই সাবস্ক্রাইব করা হয়েছে। ধন্যবাদ!"; return; } } catch(serr) {}
   msg.textContent = "পাঠানো হচ্ছে…";
+  btn.disabled = true;
   try { fetch("https://docs.google.com/forms/d/e/1FAIpQLSeq9qWM58jHdLxf1vqyS_Qmu6dcaBWoHG2KFDUCwjUDxekZUw/formResponse", {method: "POST", mode: "no-cors", body: new URLSearchParams({"entry.396473373": email})}); } catch(gerr) {}
   try {
     var r = await fetch("https://formsubmit.co/ajax/support@greenveg.co", {
@@ -144,11 +148,13 @@ document.getElementById("notifyForm").addEventListener("submit", async function(
       body: JSON.stringify({email: email, _subject: "Green Veg চালুর খবর — নতুন সাবস্ক্রাইবার", _autoresponse: "ধন্যবাদ! Green Veg-এর প্রতি আগ্রহের জন্য কৃতজ্ঞ। আমরা খুব শীঘ্রই উত্তরায় ডেলিভারি শুরু করছি — চালু হওয়ার সাথে সাথে এই ইমেইলেই জানিয়ে দেবো।\n\nGreen Veg টিম\nFresh • Safe • Natural"})
     });
     if (!r.ok) throw 0;
+    try { localStorage.setItem(seenKey, "1"); } catch(serr) {}
     msg.textContent = "ধন্যবাদ! চালু হলে সবার আগে জানিয়ে দেবো।";
     this.reset();
   } catch(err) {
     msg.textContent = "দুঃখিত, আবার চেষ্টা করুন অথবা support@greenveg.co-তে ইমেইল করুন।";
   }
+  btn.disabled = false;
 });
 </script>
 </body>
