@@ -7,7 +7,7 @@
 <meta name="description" content="Green Veg শীঘ্রই আসছে উত্তরায়। নিজেদের ফার্মের তাজা ও নিরাপদ সবজির হোম ডেলিভারি। Fresh, safe vegetables — coming soon to Uttara, Dhaka.">
 <meta name="theme-color" content="#134A24">
 <link rel="canonical" href="https://greenveg.co/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134A24'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%23FFFFFF' stroke-width='4'/%3E%3Cpath d='M21 40C21 30 28 23 38 21 38 30 32 37 21 40Z' fill='%238CC63F'/%3E%3Cpath d='M27 39l6 6 13-15' fill='none' stroke='%23FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://greenveg.co/">
 <meta property="og:title" content="Green Veg — শীঘ্রই আসছে">
@@ -35,28 +35,34 @@ h1,h2,p{margin:0}
 .hero{background:var(--deep);color:#F2FAEA;border-radius:0 0 30px 30px;padding:26px 0 44px;min-height:78vh;display:flex;flex-direction:column}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px}
 .brand small{display:block;font-size:11px;font-weight:500;color:#B9D9A6;letter-spacing:1.5px;margin-top:-4px}
-.logo{width:38px;height:38px;border-radius:12px;background:var(--lime);display:grid;place-items:center;font-size:22px}
+.logo{width:38px;height:38px;border-radius:12px;background:var(--lime);display:grid;place-items:center}
+.logo svg{width:26px;height:26px;display:block}
 .hw{display:flex;flex-direction:column;flex:1}
 .main{margin:auto 0;padding-top:40px;display:flex;flex-direction:column}
 .art{display:block}
-.sprout{width:64px;height:64px;margin-bottom:18px}
-.sprout path{stroke:var(--lime);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:120;stroke-dashoffset:120;animation:grow 1.6s ease-out .2s forwards}
-.sprout .l{fill:var(--lime);stroke:none;opacity:0;animation:pop .5s ease-out 1.5s forwards;transform-origin:32px 30px}
-@keyframes grow{to{stroke-dashoffset:0}}
-@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+.mark{width:64px;height:64px;margin-bottom:18px;display:block}
 h1{font-size:54px;line-height:1.1;font-weight:700;letter-spacing:-.5px}
 .sub{margin-top:14px;font-size:19px;color:#CFE6C0;max-width:30ch}
 .btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;min-height:52px;padding:10px 20px;border-radius:14px;background:var(--lime);color:#123018;font-weight:700;text-decoration:none}
 a:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
 .where{margin-top:14px;color:#B9D9A6;font-size:15px}
 
+.notify{display:flex;gap:8px;margin-top:16px;max-width:420px}
+.notify input{flex:1;min-width:0;min-height:52px;border-radius:14px;border:1px solid var(--line);padding:10px 14px;font:inherit;background:var(--surface);color:var(--ink)}
+.notify button{min-height:52px;padding:10px 18px;border-radius:14px;border:2px solid var(--lime);background:transparent;color:var(--lime);font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
+.notify-label{margin-top:22px;font-size:14px;color:#B9D9A6}
+.form-note{margin-top:8px;font-size:14px;color:#B9D9A6;min-height:20px}
+
 section{padding:40px 0 0}
 h2{font-size:24px;font-weight:700;margin-bottom:16px}
 .list{display:grid;gap:10px}
 .row{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+a.row{text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+a.row:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(19,74,36,.12)}
 .ico{flex:none;width:42px;height:42px;border-radius:13px;background:var(--tint);display:grid;place-items:center;font-size:21px}
 .row b{display:block;font-weight:600;line-height:1.3}
 .row span{color:var(--muted);font-size:15px;line-height:1.4}
+.row .go{margin-left:auto;color:var(--leaf);font-weight:700}
 .mail{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;border:2px solid var(--leaf);color:var(--leaf);font-weight:600;text-decoration:none;word-break:break-all}
 p.note{color:var(--muted);margin-bottom:14px}
 footer{padding:36px 0 28px;text-align:center;color:var(--muted);font-size:14px}
@@ -67,24 +73,30 @@ footer{padding:36px 0 28px;text-align:center;color:var(--muted);font-size:14px}
   .hero{min-height:0;padding:32px 0 72px}
   .main{flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:56px;padding-top:64px;margin:0}
   .art{flex:none;width:340px;height:340px;border-radius:50%;background:rgba(140,198,63,.14);display:grid;place-items:center;box-shadow:0 0 0 28px rgba(140,198,63,.07)}
-  .sprout{width:170px;height:170px;margin:0}
+  .mark{width:170px;height:170px;margin:0}
   h1{font-size:84px}
   .sub{font-size:22px;max-width:24ch}
   .btn{font-size:18px}
 }
-@media (prefers-reduced-motion:reduce){.sprout path{animation:none;stroke-dashoffset:0}.sprout .l{animation:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="wrap hw">
-    <div class="brand"><div class="logo" aria-hidden="true">🌿</div><div>Green Veg<small>FRESH · SAFE · NATURAL</small></div></div>
+    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#134A24" stroke-width="5"/><path d="M19 42C19 29 27 20 41 18 41 31 33 40 19 42Z" fill="#134A24"/><path d="M26 39l8 8 18-21" fill="none" stroke="#F4F9EF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div>Green Veg<small>FRESH · SAFE · NATURAL</small></div></div>
     <div class="main">
-      <div class="art"><svg class="sprout" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 58V30"/><path class="l" d="M32 32C32 18 42 10 56 10C56 24 48 32 32 32Z"/><path class="l" d="M32 40C32 30 24 24 12 24C12 34 20 40 32 40Z"/></svg></div>
+      <div class="art"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#8CC63F" stroke-width="4.5"/><path d="M19 42C19 29 27 20 41 18 41 31 33 40 19 42Z" fill="#8CC63F"/><path d="M26 39l8 8 18-21" fill="none" stroke="#F2FAEA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="txt">
         <h1>শীঘ্রই আসছে</h1>
         <p class="sub">নিজেদের ফার্মের তাজা ও নিরাপদ সবজি, আপনার দরজায়।</p>
-        <a class="btn" href="mailto:support@greenveg.co?subject=Green%20Veg%20Launch%20Update">✉️ চালুর খবর পেতে ইমেইল করুন</a>
+        <a class="btn" href="#order">💬 WhatsApp-এ অর্ডার করুন</a>
+        <p class="notify-label">চালুর খবর সবার আগে পেতে ইমেইল দিন</p>
+        <form class="notify" id="notifyForm">
+          <input type="email" name="email" required placeholder="আপনার ইমেইল ঠিকানা" aria-label="ইমেইল ঠিকানা">
+          <button type="submit">জানিয়ে দিন</button>
+        </form>
+        <p class="form-note" id="notifyMsg" role="status"></p>
         <p class="where">📍 প্রথমে উত্তরা, ঢাকা</p>
       </div>
     </div>
@@ -102,6 +114,15 @@ footer{padding:36px 0 28px;text-align:center;color:var(--muted);font-size:14px}
     </div>
   </section>
 
+  <section id="order">
+    <h2>WhatsApp-এ অর্ডার করুন</h2>
+    <p class="note">উত্তরা সেক্টর-০৩ ও ০৭-এ ডেলিভারি চালু আছে। আপনার সেক্টরের নম্বরে ট্যাপ করুন।</p>
+    <div class="list">
+      <a class="row" href="https://wa.me/8801540612439?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%21%20Green%20Veg%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A6%AC%E0%A6%9C%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener"><div class="ico">💬</div><div><b>01540-612439</b><span>উত্তরা সেক্টর-০৩</span></div><div class="go">→</div></a>
+      <a class="row" href="https://wa.me/8801792352358?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%21%20Green%20Veg%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%B8%E0%A6%AC%E0%A6%9C%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener"><div class="ico">💬</div><div><b>01792-352358</b><span>উত্তরা সেক্টর-০৭</span></div><div class="go">→</div></a>
+    </div>
+  </section>
+
   <section>
     <h2>যোগাযোগ</h2>
     <p class="note">প্রশ্ন বা পরামর্শ থাকলে ইমেইল করুন।</p>
@@ -110,5 +131,25 @@ footer{padding:36px 0 28px;text-align:center;color:var(--muted);font-size:14px}
 
   <footer>Green Veg — নিরাপদ খাবার, সুস্থ পরিবার<br>© 2026 greenveg.co</footer>
 </main>
+<script>
+document.getElementById("notifyForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  var msg = document.getElementById("notifyMsg");
+  var email = this.email.value.trim();
+  msg.textContent = "পাঠানো হচ্ছে…";
+  try {
+    var r = await fetch("https://formsubmit.co/ajax/support@greenveg.co", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify({email: email, _subject: "Green Veg চালুর খবর — নতুন সাবস্ক্রাইবার"})
+    });
+    if (!r.ok) throw 0;
+    msg.textContent = "ধন্যবাদ! চালু হলে সবার আগে জানিয়ে দেবো।";
+    this.reset();
+  } catch(err) {
+    msg.textContent = "দুঃখিত, আবার চেষ্টা করুন অথবা support@greenveg.co-তে ইমেইল করুন।";
+  }
+});
+</script>
 </body>
 </html>
