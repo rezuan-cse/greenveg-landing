@@ -136,6 +136,7 @@ document.getElementById("notifyForm").addEventListener("submit", async function(
   var msg = document.getElementById("notifyMsg");
   var email = this.email.value.trim();
   msg.textContent = "পাঠানো হচ্ছে…";
+  try { fetch("https://docs.google.com/forms/d/e/1FAIpQLSeq9qWM58jHdLxf1vqyS_Qmu6dcaBWoHG2KFDUCwjUDxekZUw/formResponse", {method: "POST", mode: "no-cors", body: new URLSearchParams({"entry.396473373": email})}); } catch(gerr) {}
   try {
     var r = await fetch("https://formsubmit.co/ajax/support@greenveg.co", {
       method: "POST",
